@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <style media="screen">
+  .mainDiv{
+  background:#87B548
+  }
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+  }
+
+  .form-control {
+    margin-top: 2vh;
+    padding: .1rem;
+    font-size: 12px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #eb2f64;
+    letter-spacing: 1.3px;
+  }
+
+  .form__label {
+    letter-spacing: 1.5px;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    transition: all 0.3s;
+    font-size: 19px;
+  }
+
+  .form-control:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+
+select1 {
+  position: relative;
+  display: inline-table;
+  padding-left: 100px;
+  padding-top:50px;
+	width: 500px;
+  background: #FFABAB;
+  height: 10px
+}
+
+select {
+  padding-left: 120px;
+	width: 450px;
+  background: #ffe119;
+  height:50px
+}
+mark {
+  background-color: yellow;
+  color: black;
+}
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>Word Recognition</title>
+  </head>
+  <body>
+
+<form action="" method="POST">
+<center>
+  <br>
+  <textarea rows = "5" cols = "60" class="form-control" id="text" name='text' placeholder="Enter Text" style="width: 1000px; height:100px" required/></textarea>
+
+  <label class="form__label"></label>
+  <br>
+  {% if coloredtext %}
+<p><b>{{coloredtext}}</b></p>
+{% endif %}
+{% if answer %}
+<p><b>{{answer}}</b></p>
+{% endif %}
+
+  <input type=submit class = 'btn btn-primary'>
+  <br>
+  </body>
+    </html>
